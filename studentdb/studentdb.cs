@@ -80,6 +80,13 @@ namespace studentdb
             return result;
         }
 
+        /*public static bool operator ==(Student std1, Student std2)
+        {
+            return std1.age == std2.age;
+        }*/
+
+        
+
 
 
         public Boolean bubleSort(object tab)
@@ -102,7 +109,9 @@ namespace studentdb
                 {
                     for (int j = 0; j < size - i - 1; j++)
                     {
-                        if (this.tab1[j + 1].age < this.tab1[j].age)
+                        //v struct student je nadefonovany operator < a > takze nemusime sa starat o vek
+
+                        if (this.tab1[j + 1]< this.tab1[j])
                         {
                             var tmp = this.tab1[j + 1];
                             this.tab1[j + 1] = this.tab1[j];

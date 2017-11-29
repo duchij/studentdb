@@ -10,6 +10,18 @@ namespace studentdb
     {
         public string name, surname;
         public int id,age;
+
+        public static bool operator <(Student std1, Student std2)
+        {
+            return std1.age < std2.age;
+        }
+
+        public static bool operator >(Student std1, Student std2)
+        {
+            return std1.age > std2.age;
+        }
+
+
     }
 
 
